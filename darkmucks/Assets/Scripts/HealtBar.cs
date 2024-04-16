@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealtBar : MonoBehaviour
 {
     Slider Healtbar;
+    [SerializeField] private Gradient Bar;
 
     // Start is called before the first frame update
     void Awake()
@@ -19,7 +20,7 @@ public class HealtBar : MonoBehaviour
         Healtbar.minValue = 0;
         Healtbar.value = 100;
         Healtbar.wholeNumbers = true; //tam sayýlý iþlem ya gibi biþey
-        Healtbar.fillRect.GetComponent<Image>().color = Color.green;
+        Healtbar.fillRect.GetComponent<Image>().color = Bar.Evaluate(1f);
     }
 
     // Update is called once per frame
@@ -29,34 +30,20 @@ public class HealtBar : MonoBehaviour
         {
             if (Healtbar.value > 0) 
             {
-                Debug.LogWarning("-20 hp");
-                
-                 Healtbar.value -= 20;
+                Debug.LogWarning("-5 hp");
+                Healtbar.fillRect.GetComponent<Image>().color = Bar.Evaluate(Healtbar.normalizedValue);
+                Healtbar.value -= 5;
             }
         }
         else if (Input.GetKeyDown("q"))
         {
             if (Healtbar.value < 100)
             {
-                Debug.LogWarning("+20 hp");
-
-                Healtbar.value += 20;
+                Debug.LogWarning("+5 hp");
+                Healtbar.fillRect.GetComponent<Image>().color = Bar.Evaluate(Healtbar.normalizedValue);
+                Healtbar.value += 5;
             }
-        }
-
-
-        if(Healtbar.value <= 100 && Healtbar.value >66)
-        {
-            Healtbar.fillRect.GetComponent<Image>().color = Color.green;
-        }
-        else if(Healtbar.value <= 66 && Healtbar.value > 33)
-        {
-            Healtbar.fillRect.GetComponent<Image>().color = Color.yellow;
-        }
-        else if (Healtbar.value <= 33 && Healtbar.value > 0)
-        {
-            Healtbar.fillRect.GetComponent<Image>().color = Color.red;
-        }
+        }       
 
         if (Healtbar.value <= 0)
 
