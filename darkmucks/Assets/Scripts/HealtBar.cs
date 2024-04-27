@@ -19,7 +19,7 @@ public class HealtBar : MonoBehaviour
         Healtbar.maxValue = 100;
         Healtbar.minValue = 0;
         Healtbar.value = 100;
-        Healtbar.wholeNumbers = true; //tam sayýlý iþlem ya gibi biþey
+        Healtbar.wholeNumbers = true; //tam sayili islem ya gibi bisey
         Healtbar.fillRect.GetComponent<Image>().color = Bar.Evaluate(1f);
     }
 
