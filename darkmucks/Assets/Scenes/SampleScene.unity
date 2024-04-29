@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff980d6ebdf99c845b76c78be1249fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: 500
+  Sensitivity: 350
   player: {fileID: 1111225866}
 --- !u!1 &383315971
 GameObject:
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0369c2832dfbd744842ddf69d6b64ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
 --- !u!4 &1111225869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}

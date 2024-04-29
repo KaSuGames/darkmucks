@@ -8,10 +8,10 @@ public class HealtBar : MonoBehaviour
     Slider Healtbar;
     [SerializeField] private Gradient Bar;
 
-    // Start is called before the first frame update
+
     void Awake()
     {
-        Healtbar = GetComponent<Slider>();
+        Healtbar = GetComponent<Slider>();     
     }
 
     private void Start()

@@ -5,10 +5,12 @@ public class Attack : MonoBehaviour
 {
     Animator animator;
     public Slider slider;
+    float previousSliderValue;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        previousSliderValue = slider.value;
     }
 
     void Update()
@@ -30,7 +32,10 @@ public class Attack : MonoBehaviour
         {
             animator.SetBool("IsBackWard", true);
         }
-
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.SetBool("Block", true);
+        }
         else
         {
             animator.SetBool("IsWalking", false);
@@ -42,22 +47,27 @@ public class Attack : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-             animator.SetTrigger("Slash"); 
+            animator.SetTrigger("Slash");
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            animator.SetTrigger("Slash");
+            animator.SetTrigger("Slash1");
         }
 
-        else if (Input.GetKey(KeyCode.LeftShift))
+        // Slider'ýn deðeri azaldýðýnda
+        if (slider.value < previousSliderValue)
         {
-            //animator.SetTrigger("Block");
-            animator.SetBool("Block", true);
+            // A animasyonunu çalýþtýr
+            animator.SetTrigger("impact");
         }
 
+        previousSliderValue = slider.value;
+
+        // Eðer slider'ýn deðeri 0 ise ve karakter henüz ölmemiþse
         if (slider.value == 0)
         {
-            animator.SetTrigger("die");
+            // "Die" animasyonunu baþlat
+            animator.SetTrigger("Die");
         }
     }
 }
