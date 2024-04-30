@@ -67,7 +67,7 @@ public class Attack : MonoBehaviour
         if (slider.value == 0)
         {
             // "Die" animasyonunu baþlat
-            animator.SetTrigger("Die");
+            animator.SetTrigger("die");
         }
     }
 }

@@ -44,11 +44,5 @@ public class HealtBar : MonoBehaviour
                 Healtbar.value += 5;
             }
         }       
-
-        if (Healtbar.value <= 0)
-
-        {
-            Debug.LogWarning("GAME_OVER :D");
-        }
     }
 }
