@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class HealtBar : MonoBehaviour
 {
     Slider Healtbar;
     [SerializeField] private Gradient Bar;
