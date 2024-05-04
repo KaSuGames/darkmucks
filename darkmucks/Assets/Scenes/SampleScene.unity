@@ -441,8 +441,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paladin_J_Nordstrom_Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 2042953256698253358, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042953256698253358, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042953256698253358, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.745
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -3685692520585564748, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
       insertIndex: -1
@@ -643,6 +656,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323578823}
   m_CullTransparentMesh: 1
+--- !u!4 &351781972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7680254278892050146, guid: b26af0ce42fb06c4d87c6c8125ab13aa, type: 3}
+  m_PrefabInstance: {fileID: 1224867153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &383315971
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1433635907}
   range: 5
-  centrePoint: {fileID: 1433635906}
+  centrePoint: {fileID: 351781972}
   target: {fileID: 1111225869}
   animator: {fileID: 1433635905}
   speed: 2
@@ -1982,7 +2000,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943156084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ae77e51635f2554e9e958ab4217dafd, type: 3}
   m_Name: 
